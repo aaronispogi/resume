@@ -8,6 +8,7 @@ body {
 
 header {
     display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center;
     background: #007BFF;
     color: white;
@@ -18,7 +19,7 @@ header {
     width: 100px; /* Adjust the size as needed */
     height: 100px; /* Adjust the size as needed */
     border-radius: 50%; /* Makes the image circular */
-    margin-right: 20px; /* Space between the image and the name */
+    margin-bottom: 10px; /* Space below the image */
 }
 
 nav ul {
@@ -75,4 +76,48 @@ footer {
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: add rounded corners */
     margin: 10px 0; /* Add some space between the images */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 5px 0; /* Add margin for spacing */
+    }
+
+    header h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    header h2 {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .profile-pic {
+        width: 80px; /* Smaller profile picture */
+        height: 80px; /* Smaller profile picture */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    h2, h3 {
+        font-size: 1.5em; /* Smaller font size for headings */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Even smaller font size for mobile */
+    }
+
+    header h2 {
+        font-size: 1em; /* Even smaller font size for mobile */
+    }
 }
